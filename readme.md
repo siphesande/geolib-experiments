@@ -52,7 +52,8 @@ console.log(speed);
 
 * [Distance between two locations](https://github.com/manuelbieh/Geolib#geolibgetdistanceobject-start-object-end-int-accuracy)
 * [The centre of a bunch of coordinates](https://github.com/manuelbieh/Geolib#geolibgetcenterarray-coords)
-* [Is a point in a polygon] (https://github.com/manuelbieh/Geolib#geolibispointinsideobject-latlng-array-coords)
+* [Is a point in a polygon](https://github.com/manuelbieh/Geolib#geolibispointinsideobject-latlng-array-coords)
 * [Order coordinates by distance](https://github.com/manuelbieh/Geolib#geoliborderbydistanceobject-latlng-mixed-coords)
 * [Find the nearest location to you](https://github.com/manuelbieh/Geolib#geolibfindnearestobject-latlng-mixed-coords-int-offset-int-limit)
 * [Get the speed](https://github.com/manuelbieh/Geolib#geolibgetspeedcoords-coords-options)
+* [Is the point in circle](https://github.com/manuelbieh/Geolib#geolibispointincircleobject-latlng-object-center-integer-radius)
