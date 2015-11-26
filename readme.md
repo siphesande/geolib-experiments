@@ -47,6 +47,13 @@ console.log(speed);
 
 ```
 
+## Use app.js
+
+Use the supplied `app.js` file to experiment with geolib. All the references are setup correct in the file.
+And there are two utiliy functions:
+* one to handle display text in the `results` div.
+* and one to handle button click events.
+
 
 ## Functionality to try:
 
