@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!DOCTYPE html>
+<html>
+<head>
+	<title>Location</title>
+</head>
+<body>
+	<h1>Location</h1>
+	<div id ="location"></div>
+<!-- buttons -->	
+	<button id = "btn">find location</button>
+	<button id ="clr">clear location</button>	
+</body>
+<script type="text/javascript">
+//finds current location
+	var button =document.getElementById("btn");
+	btn.addEventListener("click",function(){
+		navigator.geolocation.getCurrentPosition(function(location){
+			var loc = document.getElementById("location");
+			var location = loc.innerHTML = location.coords.latitude +
+				"," + location.coords.longitude;
+		});
+	});	
+// clears the location
+	var clear = document.getElementById("clr");
+	clear.addEventListener("click",function(){
+		var loc = document.getElementById("location");
+		var location = loc.innerHTML =" ";
+	});
+</script>
+</html>

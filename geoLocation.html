@@ -1,28 +1,30 @@
 
-var geoLibMsg = document.getElementById('geolib');
-if (geolib){
-    geoLibMsg.innerHTML = "geolib is ready!";
-}
-else{
-    geoLibMsg.innerHTML = "geolib is NOT ready!";
-}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Location</title>
+	<style>
 
-// utility functions
-var print = function(msg){
-    var results = document.getElementById('results');
-    results.innerHTML = msg;
-};
+	</style>
+</head>
+<body>
+	<h1>Locations</h1>
+	<div id ="location"></div>
+	
+	<button id = "btn">find location 1</button>
+	<button id ="clr">clear location</button><br>	
+	<div id ="location2"></div>
+    <button id = "btn2">find location 2</button>
+    <button id ="clr2">clear location 2</button><br>
+    
+	<button id = "calc">calculate distance</button>
+	
+</body>
+<script src="./geolib.min.js"></script>
+<script type="text/javascript">
 
-var clickButton = function(id, func){
-    document.getElementById(id).addEventListener('click', func)
-}
-
-//utility functions end
-
-// write your geolib code here
-var loc1 = {};
+	var loc1 = {};
 	var loc2 = {};
-	var dis ={};
 //finds current location
 	var button =document.getElementById("btn");
 	btn.addEventListener("click",function(){
@@ -64,23 +66,7 @@ var loc1 = {};
 		var distance = geolib.getDistance(
 			loc1, loc2
 		);
-		dis = document.getElementById("Distance");
-		dis.innerHTML = distance ;
-		//calc.innerHTML=distance; //calc.innerHTML=distance;
+		calc.innerHTML=distance;
 	});
-
-	var clearDistance = document.getElementById("clearD");
-	clearDistance.addEventListener("click",function(){
-		var distance = document.getElementById("calc");
-		dis.innerHTML =" ";
-	});
-
-
-
-
-// print("<strong>let's get going!</strong>");
-// clickButton("clickMe", function(){
-//     print("You clicked me!");
-// });
-
-//geolib.getDistance()
+</script>
+</html>

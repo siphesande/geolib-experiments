@@ -1,0 +1,21 @@
+{
+  "name": "geolocation",
+  "version": "0.0.0",
+  "description": "Use the supplied geolocations in `locations.json` to experiment with `geolib`.",
+  "main": "geolib.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "geolib": "~2.0.18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/siphesande/geolib-experiments.git"
+  },
+  "bugs": {
+    "url": "https://github.com/siphesande/geolib-experiments/issues"
+  }
+}
