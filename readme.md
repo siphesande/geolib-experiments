@@ -4,10 +4,11 @@ Use the supplied geolocations in `locations.json` to experiment with `geolib`.
 
 Take a look at the [geolib](https://github.com/manuelbieh/Geolib) module on GitHub.
 
-## Setup:
+## Setup
 
-It can be used from Node as a module and in the browser.
-In the browser be sure to reference it before you use it:
+### In the Browser
+
+Be sure to reference it before you use it:
 
 ```html
 <!-- be sure the src path is correct -->
@@ -15,11 +16,16 @@ In the browser be sure to reference it before you use it:
 
 ```
 
-If you would like to use it from Node, install the module like this:
+### In Node
 
-`npm install geolib`
+Install the module like this:
 
-## Examples
+`npm install geolib --save`
+
+The `--save` adds it to your `package.json`. If you don't have one already, you can use `npm init` to add one.
+
+
+## Usage examples
 
 The geolib functions returns results like this:
 
@@ -47,9 +53,9 @@ console.log(speed);
 
 ```
 
-## Use app.js
+## Client-side example
 
-Use the supplied `app.js` file to experiment with geolib. All the references are set up correctly in the file. There are two utiliy functions:
+Use the supplied `app.js` file to experiment with geolib in the browser. All the references are set up correctly in the file. There are two utility functions:
 
 * one to handle displaying text in the results `div`;
 * one to handle button `click` events.
