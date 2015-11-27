@@ -21,8 +21,8 @@ var clickButton = function(id, func){
 
 // write your geolib code here
 var loc1 = {};
-	var loc2 = {};
-	var dis ={};
+var loc2 = {};
+var dis ={};
 //finds current location
 	var button =document.getElementById("btn");
 	btn.addEventListener("click",function(){
@@ -60,7 +60,7 @@ var loc1 = {};
 //calculate distance
 	var calc =document.getElementById("calc");
 	calc.addEventListener("click",function(){
-		console.log(JSON.stringify(loc1))
+		//console.log(JSON.stringify(loc1))
 		var distance = geolib.getDistance(
 			loc1, loc2
 		);
@@ -77,6 +77,59 @@ var loc1 = {};
 
 
 
+
+
+var theCenter = {};
+var workshopSeventeen = {
+    
+        "W17 @ drydock corner":{
+        "latitude": "-33.9098908",
+        "longitude": "18.4185275"
+    },
+    
+       
+         "W17 @ Wooden doors":{
+        "latitude": "-33.9068621",
+        "longitude": "18.4186983"
+    },
+    
+        "W17 @ big door corner":{
+        "latitude": "-33.9073852",
+        "longitude": "18.417981"
+    },
+
+     "W17 @ play area":{
+        "latitude": "-33.907215",
+        "longitude": "18.4185805"
+    },
+       "Two oceans aquarium entrance":{
+        "latitude": "-33.9075261",
+        "longitude": "18.4175586"
+    },
+    
+        "W17 cafe":{
+        "latitude": "-33.9071121",
+        "longitude": "18.4184286"
+    }
+
+}
+
+var getCenter =document.getElementById("w17");
+	getCenter.addEventListener("click",function(){
+ var center = geolib.getCenter(workshopSeventeen);
+
+geolib.getCenter([
+    {latitude: -33.9098908, longitude: 18.4185275},
+    {latitude: -33.9068621, longitude: 18.4186983},
+    {latitude: -33.9073852, longitude: 18.417981},
+    {latitude: -33.907215, longitude: 18.4185805},
+    {latitude: -33.9075261, longitude: 18.4175586},
+    {latitude: -33.9071121, longitude: 18.4184286}
+]);
+theCenter = document.getElementById("centerW17");
+		theCenter.innerHTML = center;
+		//console.log(theCenter);
+});
 
 // print("<strong>let's get going!</strong>");
 // clickButton("clickMe", function(){
