@@ -55,10 +55,12 @@ console.log(speed);
 
 ## Client-side example
 
-Use the supplied `app.js` file to experiment with geolib in the browser. All the references are set up correctly in the file. There are two utility functions:
+Use the supplied `app.js` file to experiment with geolib in the browser. All the references are set up correctly in the `index.html` file. 
 
-* one to handle displaying text in the results `div`;
-* one to handle button `click` events.
+There are two utility functions:
+
+* one to handle displaying text in the results `div` called `print`
+* one to handle button `click` button events called `clickButton`.
 
 
 ## Functionality to try:
