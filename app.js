@@ -13,9 +13,9 @@ var print = function(msg){
     results.innerHTML = msg;
 };
 
-var clickButton = function(id, func){
-    document.getElementById(id).addEventListener('click', func)
-}
+// var clickButton = function(id, func){
+//     document.getElementById(id).addEventListener('click', func)
+// }
 
 //utility functions end
 
@@ -81,27 +81,27 @@ var dis ={};
 
 var theCenter = {};
 var removeCenter = {};
-var workshopSeventeen = {
+// var workshopSeventeen = {
     
-   "W17 @ drydock corner":{latitude: -33.9098908,longitude: 18.4185275},
+//    "W17 @ drydock corner":{latitude: -33.9098908,longitude: 18.4185275},
     
        
-   "W17 @ Wooden doors":{latitude: -33.9068621,longitude: 18.4186983},
+//    "W17 @ Wooden doors":{latitude: -33.9068621,longitude: 18.4186983},
     
-   "W17 @ big door corner":{latitude: -33.9073852,longitude: 18.417981},
+//    "W17 @ big door corner":{latitude: -33.9073852,longitude: 18.417981},
 
-   "W17 @ play area":{latitude: -33.907215,longitude: 18.4185805},
+//    "W17 @ play area":{latitude: -33.907215,longitude: 18.4185805},
 
-   "Two oceans aquarium entrance":{latitude: -33.9075261,longitude: 18.4175586},
+//    "Two oceans aquarium entrance":{latitude: -33.9075261,longitude: 18.4175586},
     
-   "W17 cafe":{latitude: -33.9071121,longitude: 18.4184286}
-};
+//    "W17 cafe":{latitude: -33.9071121,longitude: 18.4184286}
+// };
 
 var myCenter =document.getElementById("w17");
 	myCenter.addEventListener("click",function(){
- var center = geolib.getCenter(workshopSeventeen);
+    //var center = geolib.getCenter(workshopSeventeen);
 
- geolib.getCenter([
+ var center = geolib.getCenter([
     {latitude: -33.9098908, longitude: 18.4185275},
     {latitude: -33.9068621, longitude: 18.4186983},
     {latitude: -33.9073852, longitude: 18.417981},
@@ -110,15 +110,16 @@ var myCenter =document.getElementById("w17");
     {latitude: -33.9071121, longitude: 18.4184286}
 ]);
 var theCenter = document.getElementById("centerW17");
-    theCenter.innerHTML = center;
-		//console.log(theCenter);
+    theCenter.innerHTML = "Latitudes :"+ center.latitude + " and"  +" Longitude :" + center.longitude;
+		console.log(theCenter);
 });
 
 var clearCenter = document.getElementById("clearC");
 	clearCenter.addEventListener("click",function(){
-		var center = document.getElementById("w17");
-		    theCenter.innerHTML =" ";
-	});
+		var mycenter = document.getElementById("centerW17");
+		    mycenter.innerHTML =" ";
+
+	}); 
 
 
 // print("<strong>let's get going!</strong>");
@@ -126,4 +127,3 @@ var clearCenter = document.getElementById("clearC");
 //     print("You clicked me!");
 // });
 
-//geolib.getDistance()
